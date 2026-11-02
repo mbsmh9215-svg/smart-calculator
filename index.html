@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الحاسبة الذكية</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#eef2f1;--surface:#fff;--key:#e3eae8;--key2:#cfdad7;--text:#12232a;--muted:#5d7178;--accent:#0f766e;--accent-t:#fff;--op:#c2410c;--line:#c9d5d2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0d1a1f;--surface:#15272e;--key:#1e3640;--key2:#294852;--text:#e6f0ee;--muted:#8fa7ad;--accent:#2dd4bf;--accent-t:#06231f;--op:#fb923c;--line:#2a444d}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0d1a1f;--surface:#15272e;--key:#1e3640;--key2:#294852;--text:#e6f0ee;--muted:#8fa7ad;--accent:#2dd4bf;--accent-t:#06231f;--op:#fb923c;--line:#2a444d}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font-family:'Cairo',Tahoma,Arial,sans-serif;min-height:100%}
+main{max-width:460px;margin:0 auto;padding:14px}
+h1{font-size:1.25rem;margin:4px 0 12px;font-weight:800}
+.tabs{display:flex;gap:6px;margin-bottom:12px}
+.tabs button{flex:1;padding:10px;border:0;border-radius:10px;background:var(--key);color:var(--text);font:600 1rem inherit;font-family:inherit;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-t)}
+.panel[hidden]{display:none}
+.screen{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin-bottom:10px}
+#expr{width:100%;border:0;background:transparent;color:var(--text);font:600 1.6rem 'Cairo',monospace;direction:ltr;text-align:left;outline:none;padding:4px 0}
+#out{direction:ltr;text-align:right;min-height:2.2rem;font-size:1.9rem;font-weight:800;color:var(--accent);overflow-x:auto;white-space:nowrap}
+#out.err{color:var(--op);font-size:1rem;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.grid button,.small{border:0;border-radius:10px;padding:13px 0;background:var(--key);color:var(--text);font:600 1.05rem inherit;font-family:inherit;cursor:pointer;direction:ltr}
+.grid button:active{background:var(--key2)}
+.grid .op{color:var(--op);font-weight:800}
+.grid .eq{grid-column:span 3;background:var(--accent);color:var(--accent-t);font-weight:800;font-size:1.3rem}
